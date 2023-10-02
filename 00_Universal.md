@@ -6,6 +6,7 @@ Last updated 10. 2. 2023
   Below is an example where you can do fastqc for 30 files by specifying variable numbers with $LSB_JOBINDEX
   
 ```
+#!/bin/bash
 #BSUB -J "job[1-30]" fastqc
 
 fastqc ../S$LSB_JOBINDEX.fastq.gz
@@ -35,4 +36,5 @@ mv ../S30_S30_L001_R1_001.fastq.gz ../S30-R1.fastq.gz
 mv ../S30_S30_L001_R2_001.fastq.gz ../S30-R2.fastq.gz
 ```
 > Note: make sure 1) not making mistakes, 2) leaving a record for file name conversion.
-> 
+
+# Download and index g
